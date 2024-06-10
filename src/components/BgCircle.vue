@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { ThemeKey, colors as c, type Colors } from "../theme";
-import { inject } from "vue";
+import { ThemeKey, colors as c } from "../theme";
 import { injectStrict } from "../utils/injectStrict";
 
 const { colors } = injectStrict(ThemeKey);

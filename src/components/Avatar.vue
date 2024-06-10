@@ -3,6 +3,10 @@ import { provide } from "vue";
 import { ThemeKey, colors } from "../theme";
 import Mask from "./Mask.vue";
 import BgCircle from "./BgCircle.vue";
+import { HatsKind } from "./hats/types";
+import Hats from "./hats/Hats.vue";
+import Hair from "./hair/Hair.vue";
+import { HairKind } from "./hair/types";
 
 provide(ThemeKey, { colors, skin: colors.skin.light });
 
@@ -10,13 +14,28 @@ const props = defineProps<{
 	mask: boolean;
 	circleColor: keyof typeof colors.bgColors;
 	hatColor: keyof typeof colors.clothing;
+	hairColor: keyof typeof colors.hair;
+	hat?: HatsKind;
+	hair?: HairKind;
 }>();
 </script>
 <template>
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 990">
-		<Mask v-if="props.mask" />
-		<BgCircle v-if="props.mask" :circleColor="props.circleColor" />
 		<g :mask="props.mask ? 'url(#mask)' : undefined">
+			<Mask v-if="props.mask" />
+			<BgCircle v-if="props.mask" :circleColor="props.circleColor" />
+			<Hats
+				v-if="props.hat"
+				:kind="props.hat"
+				:color="hatColor"
+				:is-front="false"
+			/>
+			<Hair
+				v-if="props.hair"
+				:hairColor="hairColor"
+				:kind="props.hair"
+				:is-front="false"
+			/>
 			<path
 				d="M610,758.72c90.76,0,72,114.24,72.87,241.28H610Z"
 				:fill="colors.skin.light.base"
@@ -37,8 +56,8 @@ const props = defineProps<{
 				d="M233.25,500c0-147.32,119.43-266.75,266.75-266.75S766.75,352.68,766.75,500A266.22,266.22,0,0,1,668.1,707.12q-8.21,6.68-16.94,12.69C591,758,515,758,446.39,751.89c-6.66-1-13.3-2.26-19.89-3.71-26.33-5.8-51.82-14.75-75.37-27.8Q342.4,715,334.2,708.76a199.59,199.59,0,0,1-15.8-13.38q-7.14-6.63-13.79-13.78A265.86,265.86,0,0,1,233.25,500Z"
 				fill="none"
 				:stroke="colors.outline"
-				:strokeMiterlimit="10"
-				strokeWidth="12px"
+				:stroke-miterlimit="10"
+				stroke-width="12px"
 			/>
 			<path
 				d="M386.12,758.72c-90.77,0-72,114.24-72.87,241.28h72.87Z"
@@ -60,25 +79,25 @@ const props = defineProps<{
 				d="M610,758.72c90.76,0,72,114.24,72.87,241.28H632.74"
 				fill="none"
 				:stroke="colors.outline"
-				strokeLinecap="square"
-				:strokeMiterlimit="10"
-				strokeWidth="12px"
+				stroke-linecap="square"
+				:stroke-miterlimit="10"
+				stroke-width="12px"
 			/>
 			<path
 				d="M386.12,758.72c-90.77,0-72,114.24-72.87,241.28h50.07"
 				fill="none"
 				:stroke="colors.outline"
-				strokeLinecap="square"
-				:strokeMiterlimit="10"
-				strokeWidth="12px"
+				stroke-linecap="square"
+				:stroke-miterlimit="10"
+				stroke-width="12px"
 			/>
 
 			<path
 				d="M380.53,758.82l233.23-.1"
 				fill="none"
 				:stroke="colors.outline"
-				:strokeMiterlimit="10"
-				strokeWidth="12px"
+				:stroke-miterlimit="10"
+				stroke-width="12px"
 			/>
 			<path
 				d="M380.53,1070H497.15C388,1070,396.24,838.82,367.26,838.82v217.86A13.28,13.28,0,0,0,380.53,1070Z"
@@ -92,12 +111,24 @@ const props = defineProps<{
 				d="M632.74,870v8c.26,34,.26,69,0,102.75,0,2.87,0,5.72,0,8.53v67.41A13.28,13.28,0,0,1,619.47,1070H380.53a13.28,13.28,0,0,1-13.27-13.28V998.52c0-2.51,0-5.07,0-7.65-.25-34.87-.25-69.87,0-105.3V860.85"
 				fill="none"
 				:stroke="colors.outline"
-				:strokeMiterlimit="10"
-				strokeWidth="12px"
+				:stroke-miterlimit="10"
+				stroke-width="12px"
 			/>
 			<path
 				d="M626.74,870c-.19-4.17-.1-8.35.06-12.53s.47-8.35.85-12.53c.2-2.09.41-4.18.65-6.27s.49-4.17.85-6.26a55.09,55.09,0,0,1,3.59-12.53,55.09,55.09,0,0,1,3.59,12.53c.36,2.09.62,4.18.85,6.26s.45,4.18.65,6.27c.38,4.18.69,8.35.85,12.53s.25,8.36.06,12.53Z"
 				:fill="colors.outline"
+			/>
+			<Hair
+				v-if="props.hair"
+				:hairColor="hairColor"
+				:kind="props.hair"
+				:is-front="true"
+			/>
+			<Hats
+				v-if="props.hat"
+				:kind="props.hat"
+				:color="hatColor"
+				:is-front="true"
 			/>
 		</g>
 	</svg>

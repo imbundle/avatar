@@ -1,21 +1,24 @@
 <script setup lang="ts">
 import { ThemeKey } from "../../theme";
-import { type ClothingProps } from "../clotings/types";
 import { type HatProps } from "./types";
 import { injectStrict } from "../../utils/injectStrict";
 
-type Props = ClothingProps & HatProps;
 const theme = injectStrict(ThemeKey);
 const { colors } = theme;
 
-const props = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<HatProps>(), {
 	scale: 1,
+	isFront: true,
 });
 
 const { base, shadow } = colors.clothing[props.color];
 </script>
 <template>
-	<g :style="{ transformOrigin: 'center' }" :transform="`scale(${scale})`">
+	<g
+		v-if="props.isFront"
+		:style="{ transformOrigin: 'center' }"
+		:transform="`scale(${scale})`"
+	>
 		<path
 			d="M765.63,495.43s.3-2.94.8-8.24C759.75,345.82,643,233.25,500,233.25c-147.32,0-266.75,119.43-266.75,266.75,0,7.28.31,14.49.89,21.63,12.11-39.32,161.32-77.95,298.44-133.08C631.75,452.24,765.63,495.43,765.63,495.43Z"
 			:opacity="0.15"
@@ -44,8 +47,8 @@ const { base, shadow } = colors.clothing[props.color];
 			d="M747.94,163.66l0,0C684.65,74.76,266,93.83,204.16,155.69c-66.94,66.94,29.18,351,29.18,351,0-41.1,160.33-82.31,303.37-139.83,99.17,63.69,228.92,108.54,228.92,108.54S793.59,209.32,747.94,163.66Z"
 			fill="none"
 			:stroke="colors.outline"
-			:strokeMiterlimit="10"
-			strokeWidth="12px"
+			:stroke-miterlimit="10"
+			stroke-width="12px"
 		/>
 		<path
 			d="M534.47,361.33c16.1-6.69,32.19-13.37,48.12-20.36l6-2.61,5.95-2.67,6-2.66,5.91-2.76,5.92-2.73c2-.91,3.92-1.88,5.88-2.81,3.91-1.89,7.83-3.75,11.69-5.74q23.34-11.6,45.56-25.15a427.09,427.09,0,0,0,43-29.7c-1.44,1.66-2.86,3.34-4.34,5s-2.9,3.33-4.49,4.84c-3.12,3.11-6.22,6.29-9.55,9.17-1.64,1.49-3.31,2.92-5,4.39s-3.41,2.8-5.12,4.21-3.45,2.76-5.2,4.11l-5.32,4A448.92,448.92,0,0,1,634.62,328c-3.84,2.18-7.74,4.23-11.63,6.29s-7.8,4.1-11.74,6.08l-5.9,3-6,2.87c-4,1.91-7.92,3.84-11.93,5.64q-24,11.06-48.52,20.65Z"
