@@ -23,11 +23,11 @@ const props = withDefaults(defineProps<EyesProps>(), {
 		:stroke-miterlimit="10"
 		stroke-width="12px"
 	/>
-	<circle cx="338.51" cy="559.08" r="12.24" :fill="colors.outline" />
+	<circle :cx="338.51" :cy="559.08" r="12.24" :fill="colors.outline" />
 	<line
-		:x1="715.03"
-		:y1="559.08"
-		:x2="603.4"
+		::x1="715.03"
+		::y1="559.08"
+		::x2="603.4"
 		:y2="559.08"
 		fill="none"
 		stroke-linecap="round"

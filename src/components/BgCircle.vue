@@ -11,5 +11,5 @@ const color = colors.bgColors[props.circleColor];
 </script>
 
 <template>
-	<circle cx="500" cy="630.1601" r="332.441995" :fill="color" />
+	<circle :cx="500" :cy="630.1601" r="332.441995" :fill="color" />
 </template>

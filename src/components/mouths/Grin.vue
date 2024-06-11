@@ -17,9 +17,9 @@ const props = defineProps<MouthsProps>();
 		stroke-width="12px"
 	/>
 	<line
-		x1="477.85"
-		y1="596.6"
-		x2="477.85"
+		:x1="477.85"
+		:y1="596.6"
+		:x2="477.85"
 		y2="662.1"
 		fill="none"
 		:stroke="colors.outline"
@@ -27,9 +27,9 @@ const props = defineProps<MouthsProps>();
 		stroke-width="12px"
 	/>
 	<line
-		x1="526.99"
-		y1="596.6"
-		x2="526.99"
+		:x1="526.99"
+		:y1="596.6"
+		:x2="526.99"
 		y2="662.1"
 		fill="none"
 		:stroke="colors.outline"

@@ -17,6 +17,7 @@ import Avatar from "./components/Avatar.vue";
 			eyes="Hearts"
 			lipColor="red"
 			mouth="OpenMouth"
+			accesory="TinyGlasses"
 		/>
 		<Avatar
 			:mask="true"
@@ -31,6 +32,7 @@ import Avatar from "./components/Avatar.vue";
 			lipColor="pink"
 			mouth="Lips"
 			faceMaskColor="blue"
+			accesory="Shades"
 		/>
 	</div>
 </template>

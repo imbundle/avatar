@@ -9,7 +9,7 @@ const { colors } = theme;
 const props = defineProps<MouthsProps>();
 </script>
 <template>
-	<circle cx="499.7" cy="642.93" r="53.95" :fill="colors.outline" />
+	<circle :cx="499.7" :cy="642.93" r="53.95" :fill="colors.outline" />
 	<path
 		d="M491.21,663.39c-14.07-3.37-27.62,1-33.45,9.87a48.46,48.46,0,0,0,52.82,20.14,49.33,49.33,0,0,0,6-2C517.93,679.39,507.08,667.18,491.21,663.39Z"
 		:fill="colors.tongue"
@@ -19,8 +19,8 @@ const props = defineProps<MouthsProps>();
 		:fill="colors.outline"
 	/>
 	<circle
-		cx="499.7"
-		cy="642.93"
+		:cx="499.7"
+		:cy="642.93"
 		r="53.95"
 		fill="none"
 		:stroke="colors.outline"

@@ -22,7 +22,7 @@ const props = withDefaults(defineProps<EyesProps>(), {
 		:stroke-miterlimit="10"
 		stroke-width="12px"
 	/>
-	<circle cx="338.51" cy="550.79" r="12.24" :fill="colors.outline" />
+	<circle :cx="338.51" :cy="550.79" r="12.24" :fill="colors.outline" />
 	<path
 		d="M583.89,560.47c.43-15.13,6.67-30.09,15.1-41.33a72.82,72.82,0,0,1,7.12-8.53,69.73,69.73,0,0,1,90.17-8.95,73.27,73.27,0,0,1,6.53,5.13c27,21.45,30.12,63.14,15.32,93.23a62.31,62.31,0,0,1-4.78,6.86,72.09,72.09,0,0,1-7.58,8.13c-20.27,17.83-51.81,22.13-77.41,12.42a71.34,71.34,0,0,1-10.55-5c-17.9-10.78-30.37-31.09-33.43-52.23A62.93,62.93,0,0,1,583.89,560.47Z"
 		:fill="skin.shadow"
@@ -34,7 +34,7 @@ const props = withDefaults(defineProps<EyesProps>(), {
 		:stroke-miterlimit="10"
 		stroke-width="12px"
 	/>
-	<circle :cx="659.21" :cy="550.79" :r="12.24" :fill="colors.outline" />
+	<circle ::cx="659.21" :cy="550.79" :r="12.24" :fill="colors.outline" />
 	<g v-if="props.withLashes" transform="translate(0 -5)">
 		<Lashes :leftLashe="true" />
 		<Lashes :leftLashe="false" />

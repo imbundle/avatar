@@ -13,9 +13,9 @@ const props = withDefaults(defineProps<EyesProps>(), {
 
 <template>
 	<line
-		x1="375.88"
-		y1="603.9"
-		x2="306.24"
+		:x1="375.88"
+		:y1="603.9"
+		:x2="306.24"
 		y2="534.26"
 		fill="none"
 		stroke-linecap="round"
@@ -24,9 +24,9 @@ const props = withDefaults(defineProps<EyesProps>(), {
 		stroke-width="16px"
 	/>
 	<line
-		x1="306.24"
-		y1="603.9"
-		x2="375.88"
+		:x1="306.24"
+		:y1="603.9"
+		:x2="375.88"
 		y2="534.26"
 		fill="none"
 		stroke-linecap="round"
@@ -35,9 +35,9 @@ const props = withDefaults(defineProps<EyesProps>(), {
 		stroke-width="16px"
 	/>
 	<line
-		x1="695.99"
-		y1="603.9"
-		x2="626.34"
+		:x1="695.99"
+		:y1="603.9"
+		:x2="626.34"
 		y2="534.26"
 		fill="none"
 		stroke-linecap="round"
@@ -46,9 +46,9 @@ const props = withDefaults(defineProps<EyesProps>(), {
 		stroke-width="16px"
 	/>
 	<line
-		x1="626.34"
-		y1="603.9"
-		x2="695.99"
+		:x1="626.34"
+		:y1="603.9"
+		:x2="695.99"
 		y2="534.26"
 		fill="none"
 		stroke-linecap="round"

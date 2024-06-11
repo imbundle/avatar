@@ -25,8 +25,8 @@ const { base, shadow } = colors.clothing[props.color];
 			:fill="shadow"
 		/>
 		<circle
-			cx="491.44"
-			cy="157.14"
+			:cx="491.44"
+			:cy="157.14"
 			r="47.48"
 			fill="none"
 			:stroke="colors.outline"
