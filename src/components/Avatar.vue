@@ -16,6 +16,11 @@ import Mouths from "./mouths/Mouths.vue";
 import FaceMask from "./FaceMask.vue";
 import { type AccessoryKind } from "./accessory/types";
 import Accessory from "./accessory/Accessory.vue";
+import { type FacialHairKind } from "./facialHair/types";
+import FacialHair from "./facialHair/FacialHair.vue";
+import { type GraphicKind } from "./clothinggraphic/types";
+import { type ClothingKind } from "./clothing/types";
+import Clothing from "./clothing/Clothing.vue";
 
 provide(ThemeKey, { colors, skin: colors.skin.light });
 
@@ -28,6 +33,10 @@ const props = defineProps<{
 	hairColor: keyof typeof colors.hair;
 	lipColor: keyof typeof colors.lipColors;
 	faceMaskColor: keyof typeof colors.clothing;
+	clothingColor: keyof typeof colors.clothing;
+	graphic: GraphicKind;
+	clothing: ClothingKind;
+	facialHair: FacialHairKind;
 	accesory: AccessoryKind;
 	eyebrows: EyebrowsKind;
 	mouth: MouthsKind;
@@ -136,6 +145,23 @@ const props = defineProps<{
 				:fill="colors.outline"
 			/>
 
+			<Clothing
+				:kind="props.clothing"
+				:color="props.clothingColor"
+				:graphic="props.graphic"
+				:is-front="false"
+			/>
+			<Clothing
+				:kind="props.clothing"
+				:color="props.clothingColor"
+				:graphic="props.graphic"
+				:is-front="true"
+			/>
+			<FacialHair
+				:kind="props.facialHair"
+				v-if="!props.faceMask"
+				:color="props.hairColor"
+			/>
 			<Eyes :withLashes="lashes" :kind="props.eyes" />
 			<Mouths :lipColor="props.lipColor" :kind="props.mouth" />
 			<FaceMask :color="props.faceMaskColor" v-if="props.faceMask" />

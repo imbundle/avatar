@@ -1,4 +1,4 @@
-import { ClothingProps } from "../clotings/types";
+import { ClothingProps } from "../clothing/types";
 
 export interface IHatProps {
 	scale?: number;

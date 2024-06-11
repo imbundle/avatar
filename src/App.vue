@@ -18,6 +18,10 @@ import Avatar from "./components/Avatar.vue";
 			lipColor="red"
 			mouth="OpenMouth"
 			accesory="TinyGlasses"
+			facialHair="MediumBeard"
+			clothing="Shirt"
+			clothingColor="blue"
+			graphic="GraphQL"
 		/>
 		<Avatar
 			:mask="true"
@@ -33,6 +37,10 @@ import Avatar from "./components/Avatar.vue";
 			mouth="Lips"
 			faceMaskColor="blue"
 			accesory="Shades"
+			facialHair="MediumBeard"
+			clothing="Shirt"
+			clothingColor="blue"
+			graphic="GraphQL"
 		/>
 	</div>
 </template>

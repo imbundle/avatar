@@ -16,7 +16,7 @@ const props = defineProps<MouthsProps>();
 		y2="606.02"
 		fill="none"
 		:stroke="colors.outline"
-		strokeLinecap="round"
+		stroke-linecap="round"
 		:stroke-miterlimit="10"
 		stroke-width="12px"
 	/>

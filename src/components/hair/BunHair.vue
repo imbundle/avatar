@@ -29,7 +29,7 @@ const { base, shadow } = colors.hair[props.hairColor];
 				:fill="shadow"
 			/>
 			<circle
-				::cx="499.7"
+				:cx="499.7"
 				:cy="170.67"
 				:r="107.58"
 				fill="none"
