@@ -13,17 +13,19 @@ import { EyesKind } from "./eyes/types";
 import Eyes from "./eyes/Eyes.vue";
 import { MouthsKind } from "./mouths/types";
 import Mouths from "./mouths/Mouths.vue";
+import FaceMask from "./FaceMask.vue";
 
 provide(ThemeKey, { colors, skin: colors.skin.light });
 
 const props = defineProps<{
 	mask: boolean;
-	faceMask: boolean;
+	faceMask?: boolean;
 	lashes: boolean;
 	circleColor: keyof typeof colors.bgColors;
 	hatColor: keyof typeof colors.clothing;
 	hairColor: keyof typeof colors.hair;
 	lipColor: keyof typeof colors.lipColors;
+	faceMaskColor: keyof typeof colors.clothing;
 	eyebrows: EyebrowsKind;
 	mouth: MouthsKind;
 	hat?: HatsKind;
@@ -117,7 +119,7 @@ const props = defineProps<{
 			/>
 			<path
 				d="M361.26,860.85c-.19-3.67-.11-7.34.05-11s.47-7.35.86-11c.2-1.84.4-3.67.65-5.51s.49-3.67.85-5.51a44.18,44.18,0,0,1,3.59-11,44.18,44.18,0,0,1,3.59,11c.36,1.84.62,3.67.85,5.51s.45,3.67.65,5.51c.38,3.67.68,7.34.85,11s.25,7.34.06,11Z"
-				fill="{colors.outline}"
+				:fill="colors.outline"
 			/>
 			<path
 				d="M632.74,870v8c.26,34,.26,69,0,102.75,0,2.87,0,5.72,0,8.53v67.41A13.28,13.28,0,0,1,619.47,1070H380.53a13.28,13.28,0,0,1-13.27-13.28V998.52c0-2.51,0-5.07,0-7.65-.25-34.87-.25-69.87,0-105.3V860.85"
@@ -138,6 +140,7 @@ const props = defineProps<{
 			/>
 			<Eyes :withLashes="lashes" :kind="props.eyes" />
 			<Mouths :lipColor="props.lipColor" :kind="props.mouth" />
+			<FaceMask :color="props.faceMaskColor" v-if="props.faceMask" />
 			<Eyebrows :kind="props.eyebrows" />
 			<Hats
 				v-if="props.hat"
