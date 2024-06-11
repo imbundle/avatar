@@ -14,6 +14,8 @@ import Avatar from "./components/Avatar.vue";
 			:lashes="true"
 			:faceMask="false"
 			eyes="Hearts"
+			lipColor="red"
+			mouth="OpenMouth"
 		/>
 		<Avatar
 			:mask="true"
@@ -25,6 +27,8 @@ import Avatar from "./components/Avatar.vue";
 			:lashes="true"
 			:faceMask="false"
 			eyes="Dizzy"
+			lipColor="pink"
+			mouth="Lips"
 		/>
 	</div>
 </template>

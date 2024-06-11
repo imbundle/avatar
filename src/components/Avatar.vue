@@ -11,6 +11,8 @@ import Eyebrows from "./eyebrows/Eyebrows.vue";
 import { EyebrowsKind } from "./eyebrows/types";
 import { EyesKind } from "./eyes/types";
 import Eyes from "./eyes/Eyes.vue";
+import { MouthsKind } from "./mouths/types";
+import Mouths from "./mouths/Mouths.vue";
 
 provide(ThemeKey, { colors, skin: colors.skin.light });
 
@@ -21,7 +23,9 @@ const props = defineProps<{
 	circleColor: keyof typeof colors.bgColors;
 	hatColor: keyof typeof colors.clothing;
 	hairColor: keyof typeof colors.hair;
+	lipColor: keyof typeof colors.lipColors;
 	eyebrows: EyebrowsKind;
+	mouth: MouthsKind;
 	hat?: HatsKind;
 	hair?: HairKind;
 	eyes: EyesKind;
@@ -133,6 +137,7 @@ const props = defineProps<{
 				:is-front="true"
 			/>
 			<Eyes :withLashes="lashes" :kind="props.eyes" />
+			<Mouths :lipColor="props.lipColor" :kind="props.mouth" />
 			<Eyebrows :kind="props.eyebrows" />
 			<Hats
 				v-if="props.hat"
