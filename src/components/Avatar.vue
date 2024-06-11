@@ -7,16 +7,24 @@ import { HatsKind } from "./hats/types";
 import Hats from "./hats/Hats.vue";
 import Hair from "./hair/Hair.vue";
 import { HairKind } from "./hair/types";
+import Eyebrows from "./eyebrows/Eyebrows.vue";
+import { EyebrowsKind } from "./eyebrows/types";
+import { EyesKind } from "./eyes/types";
+import Eyes from "./eyes/Eyes.vue";
 
 provide(ThemeKey, { colors, skin: colors.skin.light });
 
 const props = defineProps<{
 	mask: boolean;
+	faceMask: boolean;
+	lashes: boolean;
 	circleColor: keyof typeof colors.bgColors;
 	hatColor: keyof typeof colors.clothing;
 	hairColor: keyof typeof colors.hair;
+	eyebrows: EyebrowsKind;
 	hat?: HatsKind;
 	hair?: HairKind;
+	eyes: EyesKind;
 }>();
 </script>
 <template>
@@ -124,6 +132,8 @@ const props = defineProps<{
 				:kind="props.hair"
 				:is-front="true"
 			/>
+			<Eyes :withLashes="lashes" :kind="props.eyes" />
+			<Eyebrows :kind="props.eyebrows" />
 			<Hats
 				v-if="props.hat"
 				:kind="props.hat"

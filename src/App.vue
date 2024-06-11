@@ -10,6 +10,10 @@ import Avatar from "./components/Avatar.vue";
 			hatColor="green"
 			hair="Balding"
 			hairColor="blonde"
+			eyebrows="Angry"
+			:lashes="true"
+			:faceMask="false"
+			eyes="Hearts"
 		/>
 		<Avatar
 			:mask="true"
@@ -17,6 +21,10 @@ import Avatar from "./components/Avatar.vue";
 			hatColor="green"
 			hair="Afro"
 			hairColor="blonde"
+			eyebrows="Concerned"
+			:lashes="true"
+			:faceMask="false"
+			eyes="Dizzy"
 		/>
 	</div>
 </template>
