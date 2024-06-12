@@ -8,6 +8,7 @@ import Sad from "./Sad.vue";
 import Serious from "./Serious.vue";
 import SmileOpen from "./SmileOpen.vue";
 import Tongue from "./Tongue.vue";
+import Vampire from "./Vampire.vue";
 
 type Props = {
 	kind: MouthsKind;
@@ -33,6 +34,8 @@ const currentComponent = computed(() => {
 			return SmileOpen;
 		case "Tongue":
 			return Tongue;
+		case "Vampire":
+			return Vampire;
 		default:
 			return Grin;
 	}

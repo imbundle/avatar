@@ -11,4 +11,5 @@ export type MouthsKind =
 	| "Sad"
 	| "SmileOpen"
 	| "Tongue"
-	| "Serious";
+	| "Serious"
+	| "Vampire";
