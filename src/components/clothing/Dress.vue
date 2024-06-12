@@ -13,7 +13,7 @@ const props = withDefaults(defineProps<ClothingProps>(), {
 const { base, shadow } = colors.clothing[props.color];
 </script>
 <template>
-	<template v-if="isFront">
+	<template v-if="!isFront">
 		<path
 			d="M329.09,794.17c56.12,35.58,168.48,75.53,168.48,75.53l-.16,14S397,879.36,316.32,844.9C316.32,814.38,329.09,794.17,329.09,794.17Z"
 			:fill="base"

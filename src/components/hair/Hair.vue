@@ -43,5 +43,9 @@ const componentProps = reactive({ ...props });
 </script>
 
 <template>
-	<component :is="currentComponent" v-bind="componentProps" />
+	<component
+		:is="currentComponent"
+		v-bind="componentProps"
+		v-if="props.kind !== 'Blad'"
+	/>
 </template>

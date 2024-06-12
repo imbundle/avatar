@@ -14,7 +14,7 @@ const props = withDefaults(defineProps<ClothingProps>(), {
 const { base } = colors.clothing[props.color];
 </script>
 <template>
-	<template v-if="isFront">
+	<template v-if="!isFront">
 		<polygon
 			points="547.85 847.98 505.72 813.61 580.35 758.82 419.65 758.82 494.28 813.61 452.15 847.98 414.52 791.48 414.52 869.96 588.78 869.96 588.78 786.52 547.85 847.98"
 			:fill="skin.shadow"

@@ -1,1 +1,7 @@
-export type GraphicKind = "Gatsby" | "React" | "Vue" | "GraphQL" | "Redwood";
+export type GraphicKind =
+	| "Gatsby"
+	| "React"
+	| "Vue"
+	| "GraphQL"
+	| "Redwood"
+	| "None";

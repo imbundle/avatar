@@ -1,1 +1,1 @@
-export type AccessoryKind = "RoundGlasses" | "Shades" | "TinyGlasses";
+export type AccessoryKind = "RoundGlasses" | "Shades" | "TinyGlasses" | "None";

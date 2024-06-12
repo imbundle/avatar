@@ -14,7 +14,7 @@ const props = withDefaults(defineProps<ClothingProps>(), {
 const { base, shadow } = colors.clothing[props.color];
 </script>
 <template>
-	<template v-if="isFront">
+	<template v-if="!isFront">
 		<path
 			d="M680.7,905.78c.2-37.1-1.21-70.07-7.74-95.39-10.08-25.35-28.18-40.47-60.12-40.47l22.85,134.47S658.2,914.68,680.7,905.78Z"
 			:fill="skin.shadow"

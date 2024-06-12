@@ -1,51 +1,53 @@
 <script setup lang="ts">
-import Base from "./components/Base.vue";
+import Avatar from "./components/Avatar.vue";
 </script>
 <template>
 	<div class="center">
-		<Base
-			:mask="true"
+		<Avatar
 			circleColor="blue"
 			hat="Beanie"
 			hatColor="green"
-			hair="Balding"
+			hair="Afro"
 			hairColor="blonde"
 			eyebrows="Angry"
+			:mask="true"
 			:lashes="true"
-			:faceMask="true"
+			:faceMask="false"
 			faceMaskColor="blue"
 			eyes="Hearts"
 			lipColor="red"
 			mouth="OpenMouth"
-			accesory="TinyGlasses"
-			facialHair="MediumBeard"
-			clothingColor="green"
+			accesory="None"
+			facialHair="Stubble"
+			clothingColor="red"
 			graphic="GraphQL"
 			:braStraps="true"
-			body="Breasts"
-			clothing="Dress"
+			body="Chest"
+			clothing="DressShirt"
+			skinTone="yellow"
 		/>
-		<Base
+		<Avatar
 			:mask="true"
+			:lashes="true"
+			:faceMask="false"
 			circleColor="blue"
 			hat="Beanie"
 			hatColor="green"
-			hair="Balding"
-			hairColor="blonde"
-			eyebrows="Angry"
-			:lashes="true"
-			:faceMask="true"
+			hair="Pixie"
+			hairColor="blue"
+			eyebrows="LeftLowered"
 			faceMaskColor="blue"
-			eyes="Hearts"
+			eyes="Content"
 			lipColor="red"
-			mouth="OpenMouth"
-			accesory="TinyGlasses"
-			facialHair="MediumBeard"
+			mouth="Sad"
+			accesory="None"
+			facialHair="Shaved"
 			clothingColor="green"
 			graphic="GraphQL"
 			:braStraps="true"
 			body="Breasts"
 			clothing="Shirt"
+			skinTone="yellow"
 		/>
 	</div>
 </template>

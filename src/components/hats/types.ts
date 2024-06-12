@@ -7,4 +7,4 @@ export interface IHatProps {
 
 export type HatProps = ClothingProps & IHatProps;
 
-export type HatsKind = "Beanie" | "Turban";
+export type HatsKind = "Beanie" | "Turban" | "None";

@@ -14,4 +14,5 @@ export type HairKind =
 	| "Buzz"
 	| "Long"
 	| "Pixie"
-	| "Short";
+	| "Short"
+	| "Blad";
