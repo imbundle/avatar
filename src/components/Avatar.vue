@@ -82,6 +82,7 @@ const { base: skinBase, shadow: skinShadow } = colors.skin[props.skinTone];
 				:hairColor="hairColor"
 				:kind="props.hair"
 				:is-front="false"
+				:has-hat="props.hat !== 'None'"
 			/>
 			<path
 				d="M610,758.72c90.76,0,72,114.24,72.87,241.28H610Z"
@@ -205,6 +206,7 @@ const { base: skinBase, shadow: skinShadow } = colors.skin[props.skinTone];
 				:hairColor="hairColor"
 				:kind="props.hair"
 				:is-front="true"
+				:has-hat="props.hat !== 'None'"
 			/>
 			<Eyebrows :kind="props.eyebrows" />
 			<Hats

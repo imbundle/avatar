@@ -14,8 +14,8 @@ const { base, shadow } = colors.hair[props.hairColor];
 </script>
 <template>
 	<template v-if="props.isFront">
-		<template v-if="props.hasHat">
-			<circle ::cx="499.7" :cy="170.67" :r="107.58" :fill="base" />
+		<template v-if="!props.hasHat">
+			<circle :cx="499.7" :cy="170.67" :r="107.58" :fill="base" />
 			<path
 				d="M559.29,397.34c-12.87,24-60,37.44-63.83,31.42-4.3-6.73,37.84-55.32,13.9-106.14"
 				:fill="skin.shadow"
@@ -79,7 +79,7 @@ const { base, shadow } = colors.hair[props.hairColor];
 			d="M412.45,241.49a96.65,96.65,0,0,1,13.65-4.15,138.88,138.88,0,0,1,14-2.45c2.34-.28,4.68-.53,7-.71s4.69-.33,7-.34a57.35,57.35,0,0,1,14.27,1.58,77.5,77.5,0,0,1-13.13,5.5c-2.19.73-4.39,1.37-6.59,2l-6.55,1.93c-4.34,1.32-8.67,2.6-12.94,4s-8.52,2.72-12.79,4Z"
 			:fill="colors.outline"
 		/>
-		<circle ::cx="514.26" :cy="233.25" :r="5.84" :fill="colors.outline" />
-		<circle ::cx="497.99" :cy="233.25" :r="4.13" :fill="colors.outline" />
+		<circle :cx="514.26" :cy="233.25" :r="5.84" :fill="colors.outline" />
+		<circle :cx="497.99" :cy="233.25" :r="4.13" :fill="colors.outline" />
 	</template>
 </template>
