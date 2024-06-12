@@ -12,4 +12,5 @@ export type ClothingKind =
 	| "DressShirt"
 	| "Shirt"
 	| "TankTop"
-	| "VNeck";
+	| "VNeck"
+	| "Naked";

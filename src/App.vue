@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import Avatar from "./components/Avatar.vue";
+import Base from "./components/Base.vue";
 </script>
 <template>
 	<div class="center">
-		<Avatar
+		<Base
 			:mask="true"
 			circleColor="blue"
 			hat="Beanie"
@@ -19,28 +19,33 @@ import Avatar from "./components/Avatar.vue";
 			mouth="OpenMouth"
 			accesory="TinyGlasses"
 			facialHair="MediumBeard"
-			clothing="Shirt"
-			clothingColor="blue"
+			clothingColor="green"
 			graphic="GraphQL"
+			:braStraps="true"
+			body="Breasts"
+			clothing="Dress"
 		/>
-		<Avatar
+		<Base
 			:mask="true"
 			circleColor="blue"
+			hat="Beanie"
 			hatColor="green"
-			hair="Afro"
+			hair="Balding"
 			hairColor="blonde"
-			eyebrows="Concerned"
+			eyebrows="Angry"
 			:lashes="true"
-			:faceMask="false"
-			eyes="Dizzy"
-			lipColor="pink"
-			mouth="Lips"
+			:faceMask="true"
 			faceMaskColor="blue"
-			accesory="Shades"
+			eyes="Hearts"
+			lipColor="red"
+			mouth="OpenMouth"
+			accesory="TinyGlasses"
 			facialHair="MediumBeard"
-			clothing="Shirt"
-			clothingColor="blue"
+			clothingColor="green"
 			graphic="GraphQL"
+			:braStraps="true"
+			body="Breasts"
+			clothing="Shirt"
 		/>
 	</div>
 </template>
@@ -50,7 +55,7 @@ import Avatar from "./components/Avatar.vue";
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 500px;
+	width: 100%;
 	height: auto;
 }
 </style>
